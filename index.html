@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>عرض خاص لفترة محدودة</title>
+
+<!-- Facebook Pixel -->
+<!-- حط كود البيكسل هنا -->
+
+<!-- Google Analytics -->
+<!-- حط كود GA4 هنا -->
+
+<style>
+body{
+    font-family: Arial,sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero img{
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+}
+
+.badge{
+    display:inline-block;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+h1{
+    margin:15px 0;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    font-size:22px;
+}
+
+.new-price{
+    color:#e60023;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.features{
+    padding:20px;
+}
+
+.features li{
+    margin:10px 0;
+}
+
+.timer{
+    background:#fff3cd;
+    padding:15px;
+    margin:20px;
+    border-radius:10px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.cta{
+    text-align:center;
+    padding:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#28a745;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:8px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<span class="badge">خصم 50% اليوم فقط</span>
+
+<h1>سماعة بلوتوث لاسلكية Premium</h1>
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200"
+alt="Product">
+
+<p class="old-price">1999 جنيه</p>
+<p class="new-price">999 جنيه</p>
+
+</div>
+
+<div class="timer">
+⏰ العرض ينتهي خلال:
+<div id="countdown"></div>
+</div>
+
+<div class="features">
+<h2>مميزات المنتج</h2>
+
+<ul>
+<li>بطارية تدوم حتى 30 ساعة</li>
+<li>عزل ضوضاء احترافي</li>
+<li>شحن سريع USB-C</li>
+<li>ضمان سنة كاملة</li>
+<li>توصيل مجاني</li>
+</ul>
+</div>
+
+<div class="cta">
+
+<a
+class="btn"
+href="https://example.com/checkout"
+id="buyBtn">
+اطلب الآن
+</a>
+
+</div>
+
+<div class="footer">
+الدفع عند الاستلام - شحن لجميع المحافظات
+</div>
+
+</div>
+
+<script>
+
+// Countdown Timer
+let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+let x = setInterval(function() {
+
+let now = new Date().getTime();
+
+let distance = countDownDate - now;
+
+let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+hours + " ساعة : " +
+minutes + " دقيقة : " +
+seconds + " ثانية";
+
+}, 1000);
+
+// Track Button Click
+document.getElementById("buyBtn").addEventListener("click", function() {
+
+if (typeof fbq !== 'undefined') {
+    fbq('track', 'InitiateCheckout');
+}
+
+if (typeof gtag !== 'undefined') {
+    gtag('event', 'begin_checkout');
+}
+
+});
+
+</script>
+
+</body>
+</html>
