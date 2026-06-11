@@ -1,185 +1,378 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bluetooth Pro Max</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px 20px;
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b,
+#2563eb
+);
+}
+
+.container{
+max-width:1200px;
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.product-image img{
+width:100%;
+border-radius:30px;
+box-shadow:
+0 20px 60px rgba(37,99,235,.4);
+animation:float 4s ease infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-12px);
+}
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:#ef4444;
+border-radius:50px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.desc{
+font-size:20px;
+opacity:.9;
+margin-bottom:25px;
+}
+
+.price{
+margin:20px 0;
+}
+
+.old{
+font-size:26px;
+text-decoration:line-through;
+opacity:.5;
+}
+
+.new{
+font-size:56px;
+font-weight:800;
+color:#22c55e;
+}
+
+.stock{
+margin:20px 0;
+}
+
+.bar{
+height:12px;
+background:#334155;
+border-radius:50px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.bar span{
+display:block;
+width:75%;
+height:100%;
+background:#22c55e;
+}
+
+.selects{
+display:flex;
+gap:15px;
+margin:25px 0;
+}
+
+select,input{
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:18px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+margin-top:25px;
+}
+
+.btn{
+padding:18px 35px;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.cart{
+background:#2563eb;
+color:white;
+}
+
+.buy{
+background:#22c55e;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.trust{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.trust div{
+background:rgba(255,255,255,.08);
+padding:12px 18px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+}
+
+.reviews{
+padding:80px 20px;
+background:white;
+color:#111;
+}
+
+.review-wrap{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.sticky-cart{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:15px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+display:flex;
+gap:15px;
+z-index:999;
+}
+
+.sticky-cart button{
+background:#22c55e;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:12px;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:42px;
+}
+
+.new{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
 <body>
+
+<section class="hero">
 
 <div class="container">
 
-<div class="hero">
+<div>
 
-<span class="badge">  دى مجرد صفحىة test متاخدش فى بالك 🔥 خصم 50% لفترة محدودة</span>
+<span class="badge">
+دى مجرد صفحة Testing متاخدش فى بالك 
+  🔥 خصم 50% اليوم فقط
+</span>
 
-<h1>سماعة Bluetooth Pro Max</h1>
+<h1>
+Bluetooth Pro Max
+</h1>
 
-<img
-id="productImage"
-src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200"
-style="max-width:450px;width:100%;border-radius:10px;">
-
-<p class="old-price">1999 جنيه</p>
-<p class="new-price">999 جنيه</p>
-
-<p style="color:red;font-weight:bold">
-باقي 12 قطعة فقط في المخزون
+<p class="desc">
+أفضل سماعة لاسلكية بعزل ضوضاء احترافي
+وبطارية تدوم حتى 30 ساعة.
 </p>
+
+<div class="price">
+
+<div class="old">
+1999 EGP
+</div>
+
+<div class="new">
+999 EGP
+</div>
 
 </div>
 
-<hr>
+<div class="stock">
 
-<div style="padding:20px">
+متبقي 12 قطعة فقط
 
-<h3>اختر اللون</h3>
+<div class="bar">
+<span></span>
+</div>
 
-<select id="color">
+</div>
+
+<div class="selects">
+
+<select>
 <option>أسود</option>
 <option>أبيض</option>
 <option>أزرق</option>
 </select>
 
-<br><br>
+<input type="number" value="1" min="1">
 
-<h3>الكمية</h3>
+</div>
 
-<input
-type="number"
-id="qty"
-value="1"
-min="1"
-max="10"
-style="padding:10px;width:100px">
+<div class="buttons">
 
-<br><br>
-
-<button id="addCartBtn" class="btn">
+<button class="btn cart">
 🛒 Add To Cart
 </button>
 
-<button id="buyNowBtn" class="btn">
+<button class="btn buy">
 ⚡ Buy Now
 </button>
 
 </div>
 
-<hr>
+<div class="trust">
 
-<div style="padding:20px">
+<div>🚚 شحن مجاني</div>
 
-<h2>مميزات المنتج</h2>
+<div>🔒 دفع آمن</div>
 
-<ul>
-<li>بطارية تدوم 30 ساعة</li>
-<li>عزل ضوضاء احترافي</li>
-<li>شحن سريع USB-C</li>
-<li>ميكروفون عالي الجودة</li>
-<li>ضمان سنة كاملة</li>
-</ul>
+<div>⭐ 4.8 / 5</div>
 
-</div>
-
-<hr>
-
-<div style="padding:20px">
-
-<h2>سلة المشتريات</h2>
-
-<div id="cartArea">
-
-لا يوجد منتجات حاليا
+<div>↩️ إرجاع 30 يوم</div>
 
 </div>
 
 </div>
 
-<hr>
+<div class="product-image">
 
-<div style="padding:20px">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200">
 
-<h2>آراء العملاء</h2>
+</div>
 
+</div>
+
+</section>
+
+<section class="reviews">
+
+<h2 style="text-align:center;margin-bottom:40px;">
+آراء العملاء
+</h2>
+
+<div class="review-wrap">
+
+<div class="card">
 ⭐⭐⭐⭐⭐
-محمد أحمد
-
 <p>
-أفضل سماعة اشتريتها بصراحة.
+جودة ممتازة وصوت نقي جدًا.
 </p>
+</div>
 
-<hr>
-
+<div class="card">
 ⭐⭐⭐⭐⭐
-أحمد علي
-
 <p>
-الصوت ممتاز والبطارية قوية.
+البطارية استمرت معي أكثر من يومين.
 </p>
+</div>
 
-<hr>
-
-⭐⭐⭐⭐
-سارة محمد
-
+<div class="card">
+⭐⭐⭐⭐⭐
 <p>
-وصلت بسرعة والتغليف ممتاز.
+أفضل شراء عملته هذا العام.
 </p>
-
 </div>
 
 </div>
 
-<script>
+</section>
 
-let cart=[];
+<div class="sticky-cart">
 
-document
-.getElementById("addCartBtn")
-.addEventListener("click",function(){
+<span>
+🔥 السعر الحالي 999 جنيه
+</span>
 
-let qty=document.getElementById("qty").value;
-let color=document.getElementById("color").value;
+<button>
+Add To Cart
+</button>
 
-cart.push({
-name:"Bluetooth Pro Max",
-qty:qty,
-color:color
-});
-
-document.getElementById("cartArea").innerHTML=`
-
-<b>Bluetooth Pro Max</b><br>
-اللون: ${color}<br>
-الكمية: ${qty}<br>
-السعر: ${qty*999} جنيه
-
-`;
-
-if(typeof fbq !== "undefined"){
-fbq('track','AddToCart',{
-value:999,
-currency:'EGP'
-});
-}
-
-if(typeof gtag !== "undefined"){
-gtag('event','add_to_cart');
-}
-
-alert("تمت إضافة المنتج إلى السلة");
-
-});
-
-document
-.getElementById("buyNowBtn")
-.addEventListener("click",function(){
-
-if(typeof fbq !== "undefined"){
-fbq('track','InitiateCheckout');
-}
-
-if(typeof gtag !== "undefined"){
-gtag('event','begin_checkout');
-}
-
-alert("الانتقال للدفع");
-
-});
-
-</script>
+</div>
 
 </body>
+</html>
+```
