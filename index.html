@@ -294,15 +294,25 @@ Bluetooth Pro Max
 
 <div class="buttons">
 
-<button class="btn cart">
+<button class="btn cart" id="addCartBtn">
 🛒 Add To Cart
 </button>
 
-<button class="btn buy">
+<button class="btn buy" id="buyNowBtn">
 ⚡ Buy Now
 </button>
 
 </div>
+...
+<script>
+document.getElementById("buyNowBtn").addEventListener("click", function(){
+    window.location.href = "checkout.html";
+});
+
+document.getElementById("addCartBtn").addEventListener("click", function(){
+    window.location.href = "upsell.html";
+});
+</script>
 
 <div class="trust">
 
